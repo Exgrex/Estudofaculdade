@@ -1,0 +1,129 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    margin: 0;
+
+}
+
+form{
+    background-color: bisque;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid aqua;
+
+
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: turquoise;
+    
+}
+
+.form-group{
+    margin-bottom: 20px;
+    
+
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: black;
+}
+
+input[type="text"], input[type="email"], input[type="password"],
+input[type="number"], input[type="date"], select, textarea, input[list]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    transition: all 0.3s ease, box-shadow 0.5s ease; 
+}
+
+input:focus, select:focus, textarea:focus{
+    border-color: aquamarine;
+    background-color: azure;
+    box-shadow: 0 0 10px #28a085;
+    outline: none;
+
+}
+
+input[type="radio"], input[type="checkbox"]{
+    margin-right: 8px;
+}
+
+.inline{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+fieldset{
+    border: 2px solid #007bff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+
+}
+
+legend{
+    font-weight: 600;
+    color: #007bff;
+    padding: 0, 10px;
+}
+
+.form-group button{
+    width: 100%;
+    padding: 12px;
+    background-color:#28a745 ;
+    border:none;
+    color:#fff ;
+    font-size: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+
+}
+
+.form-group button.move{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    animation: moveButton 3s infinite;
+}
+
+@keyframes moveButton{
+    0%{left: 50%; top:50%;}
+    25%{left: 70%; top:30%;}
+    50%{left: 30%; top:70%;}
+    75%{left: 80%; top:80%;}
+    100%{left: 50%; top:50%};
+}
+
+.input:hover, select:hover, textArea:hover{
+    animation: rolar 0.3s ease-in-out;
+}
+
+@keyframes rolar{
+    0%{transform: translateX(0);}
+    25%{transform: translateX(-5px);}
+    50%{transform: translateX(5px);}
+    75%{transform: translateX(-5px);}
+    100%{transform: translateX(0);}
+}
